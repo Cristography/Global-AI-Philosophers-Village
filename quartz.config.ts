@@ -1,11 +1,8 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-/**
- * Quartz 4 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
- */
+// Quartz 4 Configuration - PhiloVillage
+// Repository: cristography.github.io/Global-AI-Philosophers-Village
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "PhiloVillage",
