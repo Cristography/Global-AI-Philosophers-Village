@@ -6,7 +6,12 @@ import { readFileSync } from "fs"
  */
 export const ORIGIN_NAME = "origin"
 export const UPSTREAM_NAME = "upstream"
-export const QUARTZ_SOURCE_BRANCH = "v4"
+// In Quartz upstream, the source branch is `v4`. In user forks, the default branch is often `main`.
+// `quartz sync` pulls updates from the user's fork remote using this branch name. If your repo does
+// not have a `v4` branch, leaving this as `v4` will fail with:
+//   fatal: couldn't find remote ref v4
+// Use `main` to match this repository's default branch.
+export const QUARTZ_SOURCE_BRANCH = "main"
 export const cwd = process.cwd()
 export const cacheDir = path.join(cwd, ".quartz-cache")
 export const cacheFile = "./quartz/.quartz-cache/transpiled-build.mjs"
