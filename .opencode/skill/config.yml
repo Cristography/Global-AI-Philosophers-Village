@@ -1,0 +1,43 @@
+skills:
+  # Example skill configuration
+  # Each skill should have a corresponding .js or .ts file in the skills directory
+  
+  # Code Analysis Skill
+  analyze:
+    description: Analyze code for issues and improvements
+    enabled: false
+    triggers:
+      - "analyze"
+      - "review code"
+      - "check for bugs"
+    action: ./skills/analyze.js
+    
+  # Git Operations Skill
+  git:
+    description: Helper for git operations
+    enabled: false
+    triggers:
+      - "git commit"
+      - "git push"
+      - "git pr"
+    action: ./skills/git.js
+    
+  # Test Generation Skill
+  test-gen:
+    description: Generate tests for code
+    enabled: false
+    triggers:
+      - "write tests"
+      - "generate test"
+      - "add tests"
+    action: ./skills/test-gen.js
+    
+  # Documentation Skill
+  docs:
+    description: Generate documentation
+    enabled: false
+    triggers:
+      - "document"
+      - "generate docs"
+      - "add documentation"
+    action: ./skills/docs.js

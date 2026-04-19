@@ -1,42 +1,744 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ============================================
+// PhiloVillage - Social Media Inspired Styling
+// Reddit meets Claude AI
+// ============================================
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#f2ede8;
-  --surf:#faf7f4;
+  // Modern color palette - Light mode
+  --bg:#fafafa;
+  --surf:#ffffff;
   --card:#ffffff;
-  --border:#ddd5c8;
-  --border2:#c8bdb0;
-  --txt:#1e1a17;
-  --muted:#8c7d6e;
-  --dim:#b3a394;
+  --border:#e5e5e5;
+  --border2:#d4d4d4;
+  --txt:#171717;
+  --muted:#525252;
+  --dim:#737373;
   
-  --p1:#e8a090;
-  --p2:#a8c5b0;
-  --p3:#b2a8d4;
-  --p4:#f0c87a;
-  --p5:#90b8d8;
-  --p6:#d4a0b8;
-  --p7:#a0ccc4;
+  // Accent colors - Vibrant green like Claude
+  --p1:#22c55e;
+  --p2:#3b82f6;
+  --p3:#8b5cf6;
+  --p4:#f59e0b;
+  --p5:#06b6d4;
+  --p6:#ec4899;
+  --p7:#14b8a6;
   
-  --ac:#1e1a17;
-  --tx:#1e1a17;
-  --txm:#8c7d6e;
-  --txd:#b3a394;
-  --ok:#5a7a60;
-  --er:#c0503a;
-  --wa:#c08030;
-  --in:#5060a0;
-  --fk:#c08030;
-  --pw:#b06a88;
-  --m2m:#7060a0;
+  // Semantic colors
+  --ac:#22c55e;
+  --tx:#171717;
+  --txm:#525252;
+  --txd:#737373;
+  --ok:#22c55e;
+  --er:#ef4444;
+  --wa:#f59e0b;
+  --in:#3b82f6;
+  --fk:#f59e0b;
+  --pw:#ec4899;
+  --m2m:#8b5cf6;
   
-  --ui:'IBM Plex Mono',monospace;
+  // Typography
+  --ui:'IBM Plex Sans',system-ui,sans-serif;
   --mono:'IBM Plex Mono',monospace;
-  --r:10px;
+  
+  // Border radius - Modern rounded
+  --r:8px;
   --rl:12px;
-  --sh:0 2px 16px rgba(30,26,23,.07);
-  --sh2:0 6px 32px rgba(30,26,23,.12);
+  --rxl:16px;
+  --full:9999px;
+  
+  // Shadows - Soft and subtle
+  --sh:0 1px 2px rgba(0,0,0,0.05);
+  --sh2:0 4px 6px -1px rgba(0,0,0,0.1);
+  --sh3:0 10px 15px -3px rgba(0,0,0,0.1);
+  --sh4:0 20px 25px -5px rgba(0,0,0,0.1);
+  
+  // Smooth transitions
+  --tr:0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-slow:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Dark mode adjustments
+[data-theme="dark"] {
+  --bg:#0a0a0a;
+  --surf:#171717;
+  --card:#1f1f1f;
+  --border:#262626;
+  --border2:#333333;
+  --txt:#fafafa;
+  --muted:#a3a3a3;
+  --dim:#737373;
+  --sh:0 1px 2px rgba(0,0,0,0.3);
+  --sh2:0 4px 6px -1px rgba(0,0,0,0.4);
+  --sh3:0 10px 15px -3px rgba(0,0,0,0.5);
+  --sh4:0 20px 25px -5px rgba(0,0,0,0.6);
+}
+
+// ============================================
+// Body & Layout - Better Reading Experience
+// ============================================
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--ui);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Better article readability
+article {
+  max-width: 70ch;
+  margin: 0 auto;
+  
+  p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--txt);
+    margin-bottom: 1.25rem;
+  }
+  
+  // Better headings
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// ============================================
+// Cards - Social Media Style
+// ============================================
+
+.page > article {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: var(--sh);
+  
+  @media (max-width: 640px) {
+    padding: 1.25rem;
+    border-radius: var(--r);
+  }
+}
+
+// ============================================
+// Links - Better Visibility
+// ============================================
+
+a {
+  color: var(--p1);
+  text-decoration: none;
+  transition: var(--tr);
+  border-bottom: 1px solid transparent;
+  
+  &:hover {
+    color: var(--p2);
+    border-bottom-color: var(--p2);
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--p1);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+a.internal {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  
+  &:hover {
+    background: transparent;
+    color: var(--p2);
+  }
+}
+
+// Tag links - Reddit style pills
+a.tag-link {
+  display: inline-flex;
+  align-items: center;
+  background: var(--highlight);
+  color: var(--p1) !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: none !important;
+  transition: var(--tr);
+  
+  &:hover {
+    background: var(--p1);
+    color: white !important;
+  }
+  
+  &::before {
+    display: none;
+  }
+}
+
+// ============================================
+// Blockquotes - Modern Comment Style
+// ============================================
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--p1);
+  background: var(--surf);
+  border-radius: 0 var(--r) var(--r) 0;
+  color: var(--muted);
+  font-style: italic;
+  
+  p {
+    margin: 0;
+  }
+}
+
+// ============================================
+// Code - Better Syntax Highlighting
+// ============================================
+
+pre {
+  background: var(--surf) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem !important;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  
+  code {
+    background: transparent !important;
+    padding: 0;
+    font-size: inherit;
+  }
+}
+
+code {
+  background: var(--lightgray) !important;
+  color: var(--txt);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+// ============================================
+// Comments Section - Reddit Style
+// ============================================
+
+.section-li > .section > .comments,
+#comments {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--sh);
+}
+
+// Comment list styling
+.comments > section {
+  padding: 0;
+}
+
+.comments-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--txt);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--p1);
+  }
+}
+
+// Individual comment - Reddit style
+.remark {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+  transition: var(--tr);
+  
+  &:hover {
+    border-color: var(--dim);
+  }
+}
+
+// Comment meta - Author info
+.comment-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--p1);
+  
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--p1), var(--p5));
+    border-radius: 50%;
+    display: inline-block;
+  }
+}
+
+.comment-time {
+  color: var(--dim);
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+// ============================================
+// Tags Section - Modern Pills
+// ============================================
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--highlight);
+  color: var(--p1);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: var(--tr);
+  cursor: pointer;
+  
+  &:hover {
+    background: var(--p1);
+    color: white;
+    transform: translateY(-1px);
+  }
+}
+
+// ============================================
+// Breadcrumbs - Better Navigation
+// ============================================
+
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb-element {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  
+  a {
+    color: var(--muted);
+    font-weight: 500;
+    
+    &:hover {
+      color: var(--p1);
+    }
+    
+    &[aria-current="page"] {
+      color: var(--txt);
+      font-weight: 600;
+    }
+  }
+  
+  p {
+    color: var(--dim);
+    margin: 0;
+  }
+}
+
+.breadcrumb-separator {
+  color: var(--dim);
+  font-size: 0.75rem;
+}
+
+// ============================================
+// Search - Modern Input Style
+// ============================================
+
+.search {
+  position: relative;
+  
+  .search-button {
+    background: var(--surf) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--full) !important;
+    padding: 0 1rem !important;
+    height: 2.5rem !important;
+    display: flex;
+    align-items: center;
+    transition: var(--tr);
+    
+    &:hover {
+      border-color: var(--p1) !important;
+      box-shadow: var(--sh2);
+    }
+    
+    p {
+      color: var(--dim);
+      font-size: 0.9375rem;
+    }
+    
+    svg {
+      width: 18px;
+      min-width: 18px;
+      color: var(--dim);
+    }
+  }
+}
+
+// Search modal
+.search-modal {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  box-shadow: var(--sh4);
+  
+  input {
+    background: transparent;
+    border: none;
+    color: var(--txt);
+    
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// ============================================
+// Header - Modern Navigation
+// ============================================
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  margin: 0;
+  
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.025em;
+    
+    a {
+      color: var(--txt);
+      
+      &:hover {
+        color: var(--p1);
+      }
+    }
+  }
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+// ============================================
+// Content Meta - Better Date/Author Display
+// ============================================
+
+.content-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.content-meta-author {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 600;
+  color: var(--p1);
+}
+
+.content-meta-date {
+  color: var(--dim);
+}
+
+.content-meta-tags {
+  display: flex;
+  gap: 0.375rem;
+}
+
+// ============================================
+// Article Title - Better Hero
+// ============================================
+
+.article-title {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  
+  @media (max-width: 640px) {
+    font-size: 1.75rem;
+  }
+}
+
+// ============================================
+// Explorer / Sidebar - Modern Tree
+// ============================================
+
+.Explorer {
+  .section {
+    padding: 0.5rem 0;
+  }
+  
+  .entry {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--r);
+    font-size: 0.9375rem;
+    transition: var(--tr);
+    
+    &:hover {
+      background: var(--highlight);
+      color: var(--p1);
+    }
+    
+    &.current {
+      background: var(--p1);
+      color: white;
+      font-weight: 600;
+    }
+  }
+}
+
+// ============================================
+// Table of Contents - Modern Sidebar
+// ============================================
+
+.toc {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem;
+  
+  h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--dim);
+    margin-bottom: 0.75rem;
+  }
+  
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  li {
+    margin: 0.375rem 0;
+  }
+  
+  a {
+    font-size: 0.875rem;
+    color: var(--muted);
+    display: block;
+    padding: 0.25rem 0;
+    transition: var(--tr);
+    
+    &:hover {
+      color: var(--p1);
+      transform: translateX(2px);
+    }
+    
+    &[aria-current="page"] {
+      color: var(--p1);
+      font-weight: 600;
+    }
+  }
+}
+
+// ============================================
+// Dark Mode Toggle - Better UX
+// ============================================
+
+.darkmode-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surf);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--tr);
+  
+  &:hover {
+    background: var(--highlight);
+    transform: rotate(15deg);
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--muted);
+  }
+}
+
+// ============================================
+// Mobile Responsive - Better Touch
+// ============================================
+
+@media (max-width: 640px) {
+  // Larger touch targets
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  // Better spacing
+  .page > article {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: var(--r);
+  }
+  
+  // Readable text
+  article p {
+    font-size: 1rem;
+  }
+  
+  // Better headings
+  article h1 {
+    font-size: 1.75rem;
+  }
+  
+  .article-title {
+    font-size: 1.5rem;
+  }
+}
+
+// ============================================
+// Animations - Smooth Micro-interactions
+// ============================================
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Fade in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article {
+  animation: fadeIn 0.3s ease-out;
+}
+
+// ============================================
+// Scrollbar - Better Styling
+// ============================================
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--dim);
+  }
+}
+
+// ============================================
+// Selection - Modern Highlight
+// ============================================
+
+::selection {
+  background: var(--p1);
+  color: white;
+}
+
+// ============================================
+// Focus Ring - Accessibility
+// ============================================
+
+:focus-visible {
+  outline: 2px solid var(--p1);
+  outline-offset: 2px;
+}
+
+// Remove default focus for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
 }
