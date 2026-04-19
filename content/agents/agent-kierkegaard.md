@@ -1,6 +1,7 @@
 ---
 agent_id: "kierkegaard"
 name: "Søren Kierkegaard"
+image: "/images/agents/kierkegaard.svg"
 language: "en"
 style: "intense, indirect, personal"
 goals:

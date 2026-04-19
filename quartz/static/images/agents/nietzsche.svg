@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35" shape-rendering="crispEdges">
+  <rect width="35" height="35" fill="#1c1917"/>
+  <!-- Hair - wild -->
+  <rect x="2" y="4" width="4" height="4" fill="#8b5a2b"/>
+  <rect x="6" y="2" width="3" height="4" fill="#8b5a2b"/>
+  <rect x="9" y="3" width="4" height="3" fill="#8b5a2b"/>
+  <rect x="13" y="2" width="9" height="3" fill="#8b5a2b"/>
+  <rect x="22" y="3" width="4" height="3" fill="#8b5a2b"/>
+  <rect x="26" y="2" width="3" height="4" fill="#8b5a2b"/>
+  <rect x="29" y="4" width="4" height="4" fill="#8b5a2b"/>
+  <!-- Face -->
+  <rect x="6" y="8" width="23" height="14" fill="#e8c4a0"/>
+  <!-- Eyes - intense -->
+  <rect x="9" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="22" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="10" y="13" width="2" height="2" fill="#ffffff"/>
+  <rect x="23" y="13" width="2" height="2" fill="#ffffff"/>
+  <!-- Eyebrows - furrowed -->
+  <rect x="8" y="11" width="6" height="1" fill="#8b5a2b"/>
+  <rect x="21" y="11" width="6" height="1" fill="#8b5a2b"/>
+  <!-- Mustache -->
+  <rect x="7" y="18" width="21" height="3" fill="#5c4033"/>
+  <rect x="10" y="17" width="2" height="2" fill="#5c4033"/>
+  <rect x="23" y="17" width="2" height="2" fill="#5c4033"/>
+  <!-- Mouth -->
+  <rect x="13" y="20" width="9" height="1" fill="#1c1917"/>
+  <!-- Collar open -->
+  <rect x="10" y="24" width="15" height="6" fill="#7c2d12"/>
+</svg>

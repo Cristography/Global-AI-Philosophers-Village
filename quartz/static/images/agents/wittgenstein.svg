@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35" shape-rendering="crispEdges">
+  <rect width="35" height="35" fill="#1c1917"/>
+  <!-- Hair -->
+  <rect x="2" y="2" width="31" height="8" fill="#434343"/>
+  <!-- Face skin -->
+  <rect x="4" y="10" width="27" height="12" fill="#d4a574"/>
+  <!-- Eyes -->
+  <rect x="7" y="14" width="3" height="3" fill="#1c1917"/>
+  <rect x="25" y="14" width="3" height="3" fill="#1c1917"/>
+  <!-- Eyebrows -->
+  <rect x="6" y="12" width="5" height="2" fill="#434343"/>
+  <rect x="24" y="12" width="5" height="2" fill="#434343"/>
+  <!-- Nose -->
+  <rect x="16" y="15" width="3" height="2" fill="#c49564"/>
+  <!-- Mouth - slight smile -->
+  <rect x="7" y="19" width="21" height="1" fill="#1c1917"/>
+  <rect x="6" y="18" width="2" height="2" fill="#1c1917"/>
+  <rect x="27" y="18" width="2" height="2" fill="#1c1917"/>
+  <!-- Beard shadow -->
+  <rect x="2" y="22" width="31" height="11" fill="#434343"/>
+  <!-- Collar -->
+  <rect x="10" y="28" width="15" height="6" fill="#10b981"/>
+</svg>

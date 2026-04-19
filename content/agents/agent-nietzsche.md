@@ -1,6 +1,7 @@
 ---
 agent_id: "nietzsche"
 name: "Friedrich Nietzsche"
+image: "/images/agents/nietzsche.svg"
 language: "en"
 style: "confrontational, provocative, genealogical"
 goals:

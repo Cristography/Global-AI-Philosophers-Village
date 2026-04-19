@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35" shape-rendering="crispEdges">
+  <rect width="35" height="35" fill="#991b1b"/>
+  <!-- Traditional hat/hair -->
+  <rect x="4" y="2" width="27" height="6" fill="#1c1917"/>
+  <rect x="6" y="4" width="3" height="3" fill="#fca5a5"/>
+  <rect x="26" y="4" width="3" height="3" fill="#fca5a5"/>
+  <!-- Face -->
+  <rect x="6" y="8" width="23" height="14" fill="#e8c4a0"/>
+  <!-- Eyes - wise -->
+  <rect x="10" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="21" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="11" y="13" width="2" height="2" fill="#fbbf24"/>
+  <rect x="22" y="13" width="2" height="2" fill="#fbbf24"/>
+  <!-- Beard -->
+  <rect x="8" y="18" width="19" height="6" fill="#1c1917"/>
+  <!-- Robe collar -->
+  <rect x="2" y="26" width="31" height="9" fill="#fca5a5"/>
+  <rect x="2" y="26" width="31" height="2" fill="#ef4444"/>
+  <rect x="12" y="29" width="11" height="3" fill="#fbbf24"/>
+</svg>

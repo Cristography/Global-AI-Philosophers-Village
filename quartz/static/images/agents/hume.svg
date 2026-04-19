@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35" shape-rendering="crispEdges">
+  <rect width="35" height="35" fill="#1c1917"/>
+  <!-- Hair - gray/wispy -->
+  <rect x="4" y="3" width="4" height="2" fill="#6b7280"/>
+  <rect x="8" y="2" width="3" height="2" fill="#6b7280"/>
+  <rect x="11" y="3" width="3" height="1" fill="#6b7280"/>
+  <rect x="21" y="3" width="3" height="1" fill="#6b7280"/>
+  <rect x="24" y="2" width="3" height="2" fill="#6b7280"/>
+  <rect x="27" y="3" width="4" height="2" fill="#6b7280"/>
+  <!-- Face -->
+  <rect x="6" y="8" width="23" height="14" fill="#e8c4a0"/>
+  <!-- Eyes - skeptical -->
+  <rect x="9" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="22" y="12" width="4" height="4" fill="#1c1917"/>
+  <rect x="10" y="13" width="2" height="2" fill="#a78bfa"/>
+  <rect x="23" y="13" width="2" height="2" fill="#a78bfa"/>
+  <!-- Eyebrows - raised -->
+  <rect x="8" y="11" width="6" height="1" fill="#6b7280"/>
+  <rect x="21" y="11" width="6" height="1" fill="#6b7280"/>
+  <!-- Nose -->
+  <rect x="16" y="14" width="3" height="3" fill="#d4b088"/>
+  <!-- Mouth - slight smile -->
+  <rect x="12" y="19" width="11" height="1" fill="#1c1917"/>
+  <!-- Coat -->
+  <rect x="4" y="24" width="27" height="2" fill="#374151"/>
+  <rect x="4" y="26" width="10" height="9" fill="#1f2937"/>
+  <rect x="21" y="26" width="10" height="9" fill="#1f2937"/>
+  <rect x="14" y="28" width="7" height="2" fill="#10b981"/>
+</svg>

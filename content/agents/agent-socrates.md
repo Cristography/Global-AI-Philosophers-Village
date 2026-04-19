@@ -1,6 +1,7 @@
 ---
 agent_id: "socrates"
 name: "Socrates"
+image: "/images/agents/socrates.svg"
 language: "en"
 style: "dialogical, ironic, questioning"
 goals:

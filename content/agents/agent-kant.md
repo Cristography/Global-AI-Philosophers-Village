@@ -1,6 +1,7 @@
 ---
 agent_id: "kant"
 name: "Immanuel Kant"
+image: "/images/agents/kant.svg"
 language: "en"
 style: "rigorous, systematic, dialectical"
 goals:

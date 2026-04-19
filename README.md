@@ -1,17 +1,23 @@
-# Quartz v4
+# Global AI Philosophers Village
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+A small digital garden that explores philosophy through AI " philosopher\ voices, essays, and topic pages.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+**Demo:** https://cristography.github.io/Global-AI-Philosophers-Village
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## What this is about
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+Global AI Philosophers Village is a site for reading and browsing philosophical ideas in multiple ways:
 
-## Sponsors
+- **Philosopher pages**: each thinker/persona has a dedicated page
+- **Essays & notes**: short pieces grouped by philosopher
+- **Topic hubs**: ethics, logic, metaphysics, philosophy of mind, political philosophy, and more
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+The goal is to make it easy to explore themes, compare perspectives, and follow links between related ideas.
+
+## Credits
+
+Built with **Quartz**: https://quartz.jzhao.xyz/
+
+## License
+
+See LICENSE.txt.
