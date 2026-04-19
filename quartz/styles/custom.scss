@@ -1,169 +1,264 @@
 @use "./base.scss";
 
 // ============================================
-// PhiloVillage - Social Media Inspired Styling
-// Reddit meets Claude AI
+// PhiloVillage - Claude AI Inspired Styling
+// Social Media + AI Website Aesthetics
 // ============================================
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+// Map custom vars to Quartz base vars for compatibility
 :root{
-  // Modern color palette - Light mode
-  --bg:#fafafa;
-  --surf:#ffffff;
-  --card:#ffffff;
-  --border:#e5e5e5;
-  --border2:#d4d4d4;
-  --txt:#171717;
-  --muted:#525252;
-  --dim:#737373;
+  // First define light mode
+  --light: #faf9f7;
+  --lightgray: #f0ede8;
+  --gray: #a8a29e;
+  --darkgray: #57534e;
+  --dark: #1c1917;
+  --secondary: #10b981;
+  --tertiary: #f59e0b;
+  --highlight: rgba(16, 185, 129, 0.1);
+  --textHighlight: rgba(16, 185, 129, 0.2);
   
-  // Accent colors - Vibrant green like Claude
-  --p1:#22c55e;
-  --p2:#3b82f6;
-  --p3:#8b5cf6;
-  --p4:#f59e0b;
-  --p5:#06b6d4;
-  --p6:#ec4899;
-  --p7:#14b8a6;
+  // Then override with custom names
+  --bg: var(--light);
+  --surf: var(--light);
+  --card: #ffffff;
+  --border: #e8e6e3;
+  --border2: #d9d7d4;
+  --txt: var(--dark);
+  --muted: var(--darkgray);
+  --dim: var(--gray);
+  
+  // Accent colors
+  --p1: #10b981;
+  --p2: #3b82f6;
+  --p3: #8b5cf6;
+  --p4: #f59e0b;
+  --p5: #06b6d4;
+  --p6: #ec4899;
+  --p7: #14b8a6;
   
   // Semantic colors
-  --ac:#22c55e;
-  --tx:#171717;
-  --txm:#525252;
-  --txd:#737373;
-  --ok:#22c55e;
-  --er:#ef4444;
-  --wa:#f59e0b;
-  --in:#3b82f6;
-  --fk:#f59e0b;
-  --pw:#ec4899;
-  --m2m:#8b5cf6;
+  --ac: #10b981;
+  --tx: #1c1917;
+  --txm: #57534e;
+  --txd: #a8a29e;
+  --ok: #10b981;
+  --er: #ef4444;
+  --wa: #f59e0b;
+  --in: #3b82f6;
+  --fk: #f59e0b;
+  --pw: #ec4899;
+  --m2m: #8b5cf6;
   
   // Typography
-  --ui:'IBM Plex Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',monospace;
+  --ui: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
   
-  // Border radius - Modern rounded
-  --r:8px;
-  --rl:12px;
-  --rxl:16px;
-  --full:9999px;
+  // Border radius
+  --r: 6px;
+  --rl: 10px;
+  --rxl: 16px;
+  --full: 9999px;
   
-  // Shadows - Soft and subtle
-  --sh:0 1px 2px rgba(0,0,0,0.05);
-  --sh2:0 4px 6px -1px rgba(0,0,0,0.1);
-  --sh3:0 10px 15px -3px rgba(0,0,0,0.1);
-  --sh4:0 20px 25px -5px rgba(0,0,0,0.1);
+  // Shadows
+  --sh: 0 1px 2px rgba(0,0,0,0.04);
+  --sh2: 0 4px 6px -1px rgba(0,0,0,0.06);
+  --sh3: 0 10px 15px -3px rgba(0,0,0,0.08);
+  --sh4: 0 20px 25px -5px rgba(0,0,0,0.1);
   
-  // Smooth transitions
-  --tr:0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --tr-slow:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  // Transitions
+  --tr: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-slow: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// Dark mode adjustments
+// Dark mode - use saved-theme attribute (Quartz dark mode)
+[data-saved-theme="dark"] {
+  --light: #0c0a09;
+  --lightgray: #1c1917;
+  --gray: #78716c;
+  --darkgray: #a8a29e;
+  --dark: #fafaf9;
+  --secondary: #10b981;
+  --tertiary: #f59e0b;
+  --highlight: rgba(16, 185, 129, 0.15);
+  --textHighlight: rgba(16, 185, 129, 0.25);
+  
+  --bg: #0c0a09;
+  --surf: #1c1917;
+  --card: #292524;
+  --border: #292524;
+  --border2: #44403c;
+  --txt: #fafaf9;
+  --muted: #a8a29e;
+  --dim: #78716c;
+  
+  --sh: 0 1px 2px rgba(0,0,0,0.2);
+  --sh2: 0 4px 6px -1px rgba(0,0,0,0.3);
+  --sh3: 0 10px 15px -3px rgba(0,0,0,0.4);
+  --sh4: 0 20px 25px -5px rgba(0,0,0,0.5);
+}
+
+// Legacy support
 [data-theme="dark"] {
-  --bg:#0a0a0a;
-  --surf:#171717;
-  --card:#1f1f1f;
-  --border:#262626;
-  --border2:#333333;
-  --txt:#fafafa;
-  --muted:#a3a3a3;
-  --dim:#737373;
-  --sh:0 1px 2px rgba(0,0,0,0.3);
-  --sh2:0 4px 6px -1px rgba(0,0,0,0.4);
-  --sh3:0 10px 15px -3px rgba(0,0,0,0.5);
-  --sh4:0 20px 25px -5px rgba(0,0,0,0.6);
+  --light: #0c0a09;
+  --lightgray: #1c1917;
+  --gray: #78716c;
+  --darkgray: #a8a29e;
+  --dark: #fafaf9;
+  --secondary: #10b981;
+  --tertiary: #f59e0b;
+  --highlight: rgba(16, 185, 129, 0.15);
+  --textHighlight: rgba(16, 185, 129, 0.25);
+  
+  --bg: #0c0a09;
+  --surf: #1c1917;
+  --card: #292524;
+  --border: #292524;
+  --border2: #44403c;
+  --txt: #fafaf9;
+  --muted: #a8a29e;
+  --dim: #78716c;
+}
+
+// DARK MODE - Claude's dark theme (uses saved-theme attribute)
+[data-saved-theme="dark"] {
+  --bg:#0c0a09;
+  --surf:#1c1917;
+  --card:#292524;
+  --border:#3ch3834;
+  --border2:#44403c;
+  --txt:#fafaf9;
+  --muted:#a8a29e;
+  --dim:#78716c;
+  
+  --sh:0 1px 2px rgba(0,0,0,0.2);
+  --sh2:0 4px 6px -1px rgba(0,0,0,0.3);
+  --sh3:0 10px 15px -3px rgba(0,0,0,0.4);
+  --sh4:0 20px 25px -5px rgba(0,0,0,0.5);
+}
+
+// Legacy dark mode support
+[data-theme="dark"] {
+  --bg:#0c0a09;
+  --surf:#1c1917;
+  --card:#292524;
+  --border:#3ch3834;
+  --border2:#44403c;
+  --txt:#fafaf9;
+  --muted:#a8a29e;
+  --dim:#78716c;
+  
+  --sh:0 1px 2px rgba(0,0,0,0.2);
+  --sh2:0 4px 6px -1px rgba(0,0,0,0.3);
+  --sh3:0 10px 15px -3px rgba(0,0,0,0.4);
+  --sh4:0 20px 25px -5px rgba(0,0,0,0.5);
 }
 
 // ============================================
-// Body & Layout - Better Reading Experience
+// Base Styles
 // ============================================
 
 body {
   background: var(--bg);
   color: var(--txt);
   font-family: var(--ui);
-  line-height: 1.7;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background var(--tr-slow), color var(--tr-slow);
 }
 
-// Better article readability
-article {
-  max-width: 70ch;
+// ============================================
+// Page & Articles
+// ============================================
+
+.page {
+  max-width: 1200px;
   margin: 0 auto;
   
-  p {
-    font-size: 1.0625rem;
-    line-height: 1.75;
-    color: var(--txt);
-    margin-bottom: 1.25rem;
-  }
-  
-  // Better headings
-  h1 {
-    font-size: 2.25rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1.75rem;
-    margin-bottom: 0.5rem;
+  @media (max-width: 800px) {
+    padding: 0 1rem;
   }
 }
 
-// ============================================
-// Cards - Social Media Style
-// ============================================
-
-.page > article {
+.page > article,
+article {
   background: var(--surf);
   border: 1px solid var(--border);
   border-radius: var(--rl);
-  padding: 2rem;
-  margin: 1rem 0;
+  padding: 2rem 2.5rem;
+  margin: 1.5rem 0;
   box-shadow: var(--sh);
+  transition: background var(--tr-slow), border-color var(--tr-slow), box-shadow var(--tr-slow);
   
   @media (max-width: 640px) {
     padding: 1.25rem;
     border-radius: var(--r);
+    margin: 1rem 0;
+  }
+  
+  // Article text
+  > p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--txt);
+    margin-bottom: 1.25rem;
+  }
+  
+  // Headings
+  > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--txt);
+    margin: 2rem 0 1rem;
+    line-height: 1.2;
+  }
+  
+  > h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--txt);
+    margin: 1.75rem 0 0.75rem;
+  }
+  
+  > h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--txt);
+    margin: 1.5rem 0 0.5rem;
   }
 }
 
+.section-li > .section > article {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
 // ============================================
-// Links - Better Visibility
+// Links - Clean, Underlined
 // ============================================
 
 a {
-  color: var(--p1);
+  color: var(--ac);
   text-decoration: none;
   transition: var(--tr);
   border-bottom: 1px solid transparent;
   
   &:hover {
-    color: var(--p2);
-    border-bottom-color: var(--p2);
+    border-bottom-color: var(--ac);
   }
   
   &:focus-visible {
-    outline: 2px solid var(--p1);
+    outline: 2px solid var(--ac);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 }
 
@@ -171,29 +266,31 @@ a.internal {
   background: transparent;
   padding: 0;
   border-radius: 0;
+  border-bottom: none;
   
   &:hover {
     background: transparent;
-    color: var(--p2);
+    color: var(--ac);
   }
 }
 
-// Tag links - Reddit style pills
+// Tag pills - Reddit style
 a.tag-link {
   display: inline-flex;
   align-items: center;
-  background: var(--highlight);
-  color: var(--p1) !important;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--ac) !important;
   padding: 0.25rem 0.75rem;
   border-radius: var(--full);
   font-size: 0.8125rem;
   font-weight: 500;
   border: none !important;
-  transition: var(--tr);
+  border-bottom: none !important;
   
   &:hover {
-    background: var(--p1);
+    background: var(--ac);
     color: white !important;
+    border-bottom: none !important;
   }
   
   &::before {
@@ -202,25 +299,32 @@ a.tag-link {
 }
 
 // ============================================
-// Blockquotes - Modern Comment Style
+// Blockquotes - Comment Style
 // ============================================
 
 blockquote {
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
   padding: 1rem 1.25rem;
-  border-left: 3px solid var(--p1);
-  background: var(--surf);
+  border-left: 3px solid var(--ac);
+  background: rgba(16, 185, 129, 0.05);
   border-radius: 0 var(--r) var(--r) 0;
   color: var(--muted);
-  font-style: italic;
+  font-style: normal;
+  transition: background var(--tr-slow), border-color var(--tr-slow);
   
   p {
     margin: 0;
+    color: var(--muted);
   }
 }
 
+[data-saved-theme="dark"] blockquote,
+[data-theme="dark"] blockquote {
+  background: rgba(16, 185, 129, 0.08);
+}
+
 // ============================================
-// Code - Better Syntax Highlighting
+// Code Blocks - Clean Syntax
 // ============================================
 
 pre {
@@ -231,6 +335,8 @@ pre {
   margin: 1.25rem 0;
   font-size: 0.875rem;
   line-height: 1.6;
+  overflow-x: auto;
+  transition: background var(--tr-slow), border-color var(--tr-slow);
   
   code {
     background: transparent !important;
@@ -240,30 +346,27 @@ pre {
 }
 
 code {
-  background: var(--lightgray) !important;
+  background: var(--border) !important;
   color: var(--txt);
-  padding: 0.15rem 0.4rem;
+  padding: 0.15rem 0.35rem;
   border-radius: 4px;
   font-size: 0.875em;
 }
 
 // ============================================
-// Comments Section - Reddit Style
+// Comments Section
 // ============================================
 
 .section-li > .section > .comments,
-#comments {
+#comments,
+.comments-section {
   background: var(--surf);
   border: 1px solid var(--border);
   border-radius: var(--rl);
   padding: 1.5rem;
   margin: 1.5rem 0;
   box-shadow: var(--sh);
-}
-
-// Comment list styling
-.comments > section {
-  padding: 0;
+  transition: background var(--tr-slow), border-color var(--tr-slow);
 }
 
 .comments-section-title {
@@ -280,13 +383,13 @@ code {
   svg {
     width: 20px;
     height: 20px;
-    color: var(--p1);
+    color: var(--ac);
   }
 }
 
-// Individual comment - Reddit style
+// Individual comment
 .remark {
-  background: var(--surf);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--r);
   padding: 1rem 1.25rem;
@@ -298,33 +401,8 @@ code {
   }
 }
 
-// Comment meta - Author info
-.comment-author {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--p1);
-  
-  &::before {
-    content: "";
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, var(--p1), var(--p5));
-    border-radius: 50%;
-    display: inline-block;
-  }
-}
-
-.comment-time {
-  color: var(--dim);
-  font-size: 0.8125rem;
-  font-weight: 400;
-}
-
 // ============================================
-// Tags Section - Modern Pills
+// Tags - Clean Pills
 // ============================================
 
 .tags {
@@ -334,11 +412,12 @@ code {
   margin: 1rem 0;
 }
 
-.tag {
+.tag,
+li.tag {
   display: inline-flex;
   align-items: center;
-  background: var(--highlight);
-  color: var(--p1);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--ac);
   padding: 0.375rem 0.875rem;
   border-radius: var(--full);
   font-size: 0.8125rem;
@@ -347,22 +426,23 @@ code {
   cursor: pointer;
   
   &:hover {
-    background: var(--p1);
+    background: var(--ac);
     color: white;
     transform: translateY(-1px);
   }
 }
 
 // ============================================
-// Breadcrumbs - Better Navigation
+// Breadcrumbs - Navigation
 // ============================================
 
 .breadcrumb-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .breadcrumb-element {
@@ -374,9 +454,11 @@ code {
   a {
     color: var(--muted);
     font-weight: 500;
+    border-bottom: none;
     
     &:hover {
-      color: var(--p1);
+      color: var(--ac);
+      background: transparent;
     }
     
     &[aria-current="page"] {
@@ -391,13 +473,8 @@ code {
   }
 }
 
-.breadcrumb-separator {
-  color: var(--dim);
-  font-size: 0.75rem;
-}
-
 // ============================================
-// Search - Modern Input Style
+// Search - Modern Input
 // ============================================
 
 .search {
@@ -406,7 +483,7 @@ code {
   .search-button {
     background: var(--surf) !important;
     border: 1px solid var(--border) !important;
-    border-radius: var(--full) !important;
+    border-radius: var(--r) !important;
     padding: 0 1rem !important;
     height: 2.5rem !important;
     display: flex;
@@ -414,7 +491,7 @@ code {
     transition: var(--tr);
     
     &:hover {
-      border-color: var(--p1) !important;
+      border-color: var(--ac) !important;
       box-shadow: var(--sh2);
     }
     
@@ -431,26 +508,8 @@ code {
   }
 }
 
-// Search modal
-.search-modal {
-  background: var(--surf);
-  border: 1px solid var(--border);
-  border-radius: var(--rl);
-  box-shadow: var(--sh4);
-  
-  input {
-    background: transparent;
-    border: none;
-    color: var(--txt);
-    
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
 // ============================================
-// Header - Modern Navigation
+// Header - Navigation
 // ============================================
 
 header {
@@ -463,14 +522,16 @@ header {
   h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 0;
     letter-spacing: -0.025em;
+    margin: 0;
     
     a {
       color: var(--txt);
+      border-bottom: none;
       
       &:hover {
-        color: var(--p1);
+        color: var(--ac);
+        background: transparent;
       }
     }
   }
@@ -483,7 +544,24 @@ header {
 }
 
 // ============================================
-// Content Meta - Better Date/Author Display
+// Article Title - Hero
+// ============================================
+
+.article-title {
+  margin: 0 0 1rem 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--txt);
+  
+  @media (max-width: 640px) {
+    font-size: 1.625rem;
+  }
+}
+
+// ============================================
+// Content Meta
 // ============================================
 
 .content-meta {
@@ -493,7 +571,7 @@ header {
   gap: 0.75rem;
   font-size: 0.875rem;
   color: var(--muted);
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--border);
 }
@@ -503,7 +581,7 @@ header {
   align-items: center;
   gap: 0.375rem;
   font-weight: 600;
-  color: var(--p1);
+  color: var(--ac);
 }
 
 .content-meta-date {
@@ -516,51 +594,7 @@ header {
 }
 
 // ============================================
-// Article Title - Better Hero
-// ============================================
-
-.article-title {
-  margin: 0 0 1rem 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  
-  @media (max-width: 640px) {
-    font-size: 1.75rem;
-  }
-}
-
-// ============================================
-// Explorer / Sidebar - Modern Tree
-// ============================================
-
-.Explorer {
-  .section {
-    padding: 0.5rem 0;
-  }
-  
-  .entry {
-    padding: 0.5rem 0.75rem;
-    border-radius: var(--r);
-    font-size: 0.9375rem;
-    transition: var(--tr);
-    
-    &:hover {
-      background: var(--highlight);
-      color: var(--p1);
-    }
-    
-    &.current {
-      background: var(--p1);
-      color: white;
-      font-weight: 600;
-    }
-  }
-}
-
-// ============================================
-// Table of Contents - Modern Sidebar
+// Table of Contents
 // ============================================
 
 .toc {
@@ -568,6 +602,7 @@ header {
   border: 1px solid var(--border);
   border-radius: var(--r);
   padding: 1rem;
+  transition: background var(--tr-slow), border-color var(--tr-slow);
   
   h3 {
     font-size: 0.75rem;
@@ -593,24 +628,55 @@ header {
     display: block;
     padding: 0.25rem 0;
     transition: var(--tr);
+    border-bottom: none;
     
     &:hover {
-      color: var(--p1);
+      color: var(--ac);
       transform: translateX(2px);
     }
     
     &[aria-current="page"] {
-      color: var(--p1);
+      color: var(--ac);
       font-weight: 600;
     }
   }
 }
 
 // ============================================
-// Dark Mode Toggle - Better UX
+// Explorer / Sidebar
 // ============================================
 
-.darkmode-toggle {
+.Explorer {
+  .section {
+    padding: 0.5rem 0;
+  }
+  
+  .entry {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--r);
+    font-size: 0.9375rem;
+    transition: var(--tr);
+    border-bottom: none;
+    
+    &:hover {
+      background: var(--border);
+      color: var(--ac);
+    }
+    
+    &.current {
+      background: var(--ac);
+      color: white;
+      font-weight: 600;
+    }
+  }
+}
+
+// ============================================
+// Dark Mode Toggle
+// ============================================
+
+.darkmode-toggle,
+.darkmode {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -623,7 +689,7 @@ header {
   transition: var(--tr);
   
   &:hover {
-    background: var(--highlight);
+    background: var(--border);
     transform: rotate(15deg);
   }
   
@@ -635,43 +701,38 @@ header {
 }
 
 // ============================================
-// Mobile Responsive - Better Touch
+// Mobile
 // ============================================
 
 @media (max-width: 640px) {
-  // Larger touch targets
   a, button {
     min-height: 44px;
     min-width: 44px;
   }
   
-  // Better spacing
   .page > article {
     padding: 1rem;
     margin: 0.5rem;
     border-radius: var(--r);
   }
   
-  // Readable text
   article p {
     font-size: 1rem;
   }
   
-  // Better headings
   article h1 {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
   }
   
   .article-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 }
 
 // ============================================
-// Animations - Smooth Micro-interactions
+// Animations
 // ============================================
 
-// Reduced motion support
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -682,11 +743,10 @@ header {
   }
 }
 
-// Fade in animation
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -695,11 +755,11 @@ header {
 }
 
 article {
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.25s ease-out;
 }
 
 // ============================================
-// Scrollbar - Better Styling
+// Scrollbar
 // ============================================
 
 ::-webkit-scrollbar {
@@ -721,24 +781,51 @@ article {
 }
 
 // ============================================
-// Selection - Modern Highlight
+// Selection
 // ============================================
 
 ::selection {
-  background: var(--p1);
+  background: var(--ac);
   color: white;
 }
 
 // ============================================
-// Focus Ring - Accessibility
+// Focus
 // ============================================
 
 :focus-visible {
-  outline: 2px solid var(--p1);
+  outline: 2px solid var(--ac);
   outline-offset: 2px;
 }
 
-// Remove default focus for mouse users
 :focus:not(:focus-visible) {
   outline: none;
+}
+
+// ============================================
+// Utility Classes
+// ============================================
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-dim {
+  color: var(--dim);
+}
+
+.text-accent {
+  color: var(--ac);
+}
+
+.bg-surface {
+  background: var(--surf);
+}
+
+.bg-card {
+  background: var(--card);
+}
+
+.border-default {
+  border-color: var(--border);
 }
