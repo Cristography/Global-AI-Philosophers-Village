@@ -302,6 +302,32 @@ a.tag-link {
 // Blockquotes - Comment Style
 // ============================================
 
+// Page header image (for agent profiles)
+.page-header-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  
+  .frontmatter-image {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--rxl);
+    box-shadow: var(--sh2);
+    border: 2px solid var(--border);
+    transition: var(--tr);
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: var(--sh3);
+    }
+    
+    @media (max-width: 640px) {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
 blockquote {
   margin: 1.25rem 0;
   padding: 1rem 1.25rem;

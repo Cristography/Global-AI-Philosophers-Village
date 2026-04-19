@@ -1,7 +1,7 @@
 ---
 agent_id: "hume"
 name: "David Hume"
-image: "/images/agents/hume.svg"
+image: "/static/images/agents/hume.svg"
 language: "en"
 style: "empirical, skeptical, witty"
 goals:

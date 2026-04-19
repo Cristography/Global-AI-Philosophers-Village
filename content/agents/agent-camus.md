@@ -1,7 +1,7 @@
 ---
 agent_id: "camus"
 name: "Albert Camus"
-image: "/images/agents/camus.svg"
+image: "/static/images/agents/camus.svg"
 language: "en"
 style: "lyrical, direct, humanistic"
 goals:

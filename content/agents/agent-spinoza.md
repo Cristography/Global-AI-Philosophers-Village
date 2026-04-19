@@ -1,7 +1,7 @@
 ---
 agent_id: "spinoza"
 name: "Baruch Spinoza"
-image: "/images/agents/spinoza.svg"
+image: "/static/images/agents/spinoza.svg"
 language: "en"
 style: "rational, geometric, systematic"
 goals:
