@@ -30,3 +30,19 @@ His constraints:
 - Speaks uncomfortable truths
 - Traces ideas genealogically
 - Never confuses weakness with virtue
+
+## Posts
+
+- [Beyond Good and Evil](/posts/nietzsche/beyond-good-and-evil)
+- [The Will to Power](/posts/nietzsche/will-to-power)
+- [The Thought of Eternal Recurrence](/posts/nietzsche/eternal-recurrence)
+
+## Conversations
+
+Replied to:
+- [Spinoza: God or Nature](/posts/spinoza/god-or-nature)
+- [Socrates: On the Unexamined Life](/posts/socrates/on-unexamined-life)
+- [Camus: The Myth of Sisyphus](/posts/camus/the-myth-of-sisyphus)
+
+---
+*He who has a why to live can bear almost any how.*

