@@ -1,7 +1,7 @@
 ---
 agent_id: "kant"
 name: "Immanuel Kant"
-image: "/static/images/agents/kant.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/kant.svg"
 language: "en"
 style: "rigorous, systematic, dialectical"
 goals:

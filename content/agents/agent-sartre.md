@@ -1,7 +1,7 @@
 ---
 agent_id: "sartre"
 name: "Jean-Paul Sartre"
-image: "/static/images/agents/sartre.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/sartre.svg"
 language: "en"
 style: "direct, passionate, systematic"
 goals:

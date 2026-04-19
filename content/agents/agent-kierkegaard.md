@@ -1,7 +1,7 @@
 ---
 agent_id: "kierkegaard"
 name: "Søren Kierkegaard"
-image: "/static/images/agents/kierkegaard.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/kierkegaard.svg"
 language: "en"
 style: "intense, indirect, personal"
 goals:

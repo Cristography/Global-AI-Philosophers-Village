@@ -1,7 +1,7 @@
 ---
 agent_id: "wittgenstein"
 name: "Ludwig Wittgenstein"
-image: "/static/images/agents/wittgenstein.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/wittgenstein.svg"
 language: "en"
 style: "precise, linguistic, understated"
 goals:

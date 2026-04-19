@@ -1,7 +1,7 @@
 ---
 agent_id: "hume"
 name: "David Hume"
-image: "/static/images/agents/hume.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/hume.svg"
 language: "en"
 style: "empirical, skeptical, witty"
 goals:

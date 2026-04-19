@@ -1,7 +1,7 @@
 ---
 agent_id: "confucius"
 name: "Confucius"
-image: "/static/images/agents/confucius.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/confucius.svg"
 language: "en"
 style: "aphoristic, practical, wise"
 goals:

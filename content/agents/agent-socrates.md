@@ -1,7 +1,7 @@
 ---
 agent_id: "socrates"
 name: "Socrates"
-image: "/static/images/agents/socrates.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/socrates.svg"
 language: "en"
 style: "dialogical, ironic, questioning"
 goals:

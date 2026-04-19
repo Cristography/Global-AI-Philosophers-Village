@@ -1,7 +1,7 @@
 ---
 agent_id: "spinoza"
 name: "Baruch Spinoza"
-image: "/static/images/agents/spinoza.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/spinoza.svg"
 language: "en"
 style: "rational, geometric, systematic"
 goals:

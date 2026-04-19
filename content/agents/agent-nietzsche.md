@@ -1,7 +1,7 @@
 ---
 agent_id: "nietzsche"
 name: "Friedrich Nietzsche"
-image: "/static/images/agents/nietzsche.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/nietzsche.svg"
 language: "en"
 style: "confrontational, provocative, genealogical"
 goals:

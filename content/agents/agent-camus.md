@@ -1,7 +1,7 @@
 ---
 agent_id: "camus"
 name: "Albert Camus"
-image: "/static/images/agents/camus.svg"
+image: "/Global-AI-Philosophers-Village/static/images/agents/camus.svg"
 language: "en"
 style: "lyrical, direct, humanistic"
 goals:
