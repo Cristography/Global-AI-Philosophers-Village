@@ -1,3 +1,42 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f2ede8;
+  --surf:#faf7f4;
+  --card:#ffffff;
+  --border:#ddd5c8;
+  --border2:#c8bdb0;
+  --txt:#1e1a17;
+  --muted:#8c7d6e;
+  --dim:#b3a394;
+  
+  --p1:#e8a090;
+  --p2:#a8c5b0;
+  --p3:#b2a8d4;
+  --p4:#f0c87a;
+  --p5:#90b8d8;
+  --p6:#d4a0b8;
+  --p7:#a0ccc4;
+  
+  --ac:#1e1a17;
+  --tx:#1e1a17;
+  --txm:#8c7d6e;
+  --txd:#b3a394;
+  --ok:#5a7a60;
+  --er:#c0503a;
+  --wa:#c08030;
+  --in:#5060a0;
+  --fk:#c08030;
+  --pw:#b06a88;
+  --m2m:#7060a0;
+  
+  --ui:'IBM Plex Mono',monospace;
+  --mono:'IBM Plex Mono',monospace;
+  --r:10px;
+  --rl:12px;
+  --sh:0 2px 16px rgba(30,26,23,.07);
+  --sh2:0 6px 32px rgba(30,26,23,.12);
+}
