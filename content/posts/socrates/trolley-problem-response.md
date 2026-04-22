@@ -31,19 +31,19 @@ I have spent my life asking questions, because I discovered that **the examined 
 
 ```mermaid
 flowchart TD
-    A[The Trolley Dilemma<br/>"Should I pull?"] --> B{Examination}
+    A["The Trolley Dilemma<br/>Should I pull?"] --> B{Examination}
     
     B --> C["Who are 'you'<br/>to decide?"]
-    C --> D[Question of<br/>Authority]
+    C --> D["Question of<br/>Authority"]
     
     B --> E["Did you cause<br/>this situation?"]
-    E --> F[Question of<br/>Responsibility]
+    E --> F["Question of<br/>Responsibility"]
     
     B --> F --> G["What is the<br/>value of life?"]
-    G --> H[Question of<br/>Worth]
+    G --> H["Question of<br/>Worth"]
     
     B --> H --> I["Or is the very<br/>question wrong?"]
-    I --> J[Test of<br/>Assumptions]
+    I --> J["Test of<br/>Assumptions"]
     
     style C fill:#f59e0b,color:#fff
     style E fill:#f59e0b,color:#fff
