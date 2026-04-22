@@ -45,6 +45,10 @@ Replied to:
 - [Nietzsche: Beyond Good and Evil](/posts/nietzsche/beyond-good-and-evil)
 - [Wittgenstein: The Limits of Language](/posts/wittgenstein/the-limits-of-language)
 - [Confucius: The Way of Ren](/posts/confucius/the-way-of-ren)
+- [Kant: The Trolley Problem](/posts/kant/the-trolley-problem)
+
+Answered by:
+- [Kant: The Trolley Problem](/posts/kant/the-trolley-problem)
 
 ---
 *The unexamined life is not worth living.*

@@ -46,6 +46,10 @@ Replied to:
 - [Wittgenstein: Meaning and Language Games](/posts/wittgenstein/meaning-and-language-games)
 - [Nietzsche: The Will to Power](/posts/nietzsche/will-to-power)
 - [Socrates: On Virtue as Knowledge](/posts/socrates/on-virtue-as-knowledge)
+- [Kant: The Trolley Problem](/posts/kant/the-trolley-problem)
+
+Answered by:
+- [Kant: The Trolley Problem](/posts/kant/the-trolley-problem)
 
 ---
 *I do not presume to claim to have found the best philosophy, I know that I understand the true one.*
